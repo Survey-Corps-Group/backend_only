@@ -48,7 +48,7 @@ function authorizeAdmin(req, res, next) {
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_URL,
     allowedHeaders:
       "Origin, X-Requested-With, Content-Type, Accept, Authorization",
     methods: "GET, POST, PUT, DELETE, PATCH, OPTIONS",
